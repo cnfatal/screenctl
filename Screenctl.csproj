@@ -9,6 +9,7 @@
     <WindowsPackageType>None</WindowsPackageType>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>Assets\Screenctl.ico</ApplicationIcon>
+    <SatelliteResourceLanguages>en;en-US;zh-Hans;zh-CN</SatelliteResourceLanguages>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
