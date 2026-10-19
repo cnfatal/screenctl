@@ -1,0 +1,82 @@
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="Quick" xml:space="preserve"><value>快速控制</value></data>
+  <data name="Advanced" xml:space="preserve"><value>高级控制</value></data>
+  <data name="SelectDisplay" xml:space="preserve"><value>选择显示器</value></data>
+  <data name="Display" xml:space="preserve"><value>显示器</value></data>
+  <data name="Brightness" xml:space="preserve"><value>亮度</value></data>
+  <data name="Contrast" xml:space="preserve"><value>对比度</value></data>
+  <data name="Picture" xml:space="preserve"><value>画面</value></data>
+  <data name="VcpCode" xml:space="preserve"><value>VCP 代码（十六进制）</value></data>
+  <data name="Value" xml:space="preserve"><value>数值</value></data>
+  <data name="Read" xml:space="preserve"><value>读取数值</value></data>
+  <data name="Write" xml:space="preserve"><value>写入数值</value></data>
+  <data name="ReportedMaximum" xml:space="preserve"><value>上限：{0:N0}</value></data>
+  <data name="Capabilities" xml:space="preserve"><value>显示器能力</value></data>
+  <data name="Refresh" xml:space="preserve"><value>刷新显示器</value></data>
+  <data name="Open" xml:space="preserve"><value>打开</value></data>
+  <data name="Exit" xml:space="preserve"><value>退出</value></data>
+  <data name="TrayTitle" xml:space="preserve"><value>Screenctl · 显示器控制</value></data>
+  <data name="NoDisplays" xml:space="preserve"><value>没有检测到外接显示器。</value></data>
+  <data name="FeatureUnavailable" xml:space="preserve"><value>无法读取：{0}</value></data>
+  <data name="AdjustmentFailed" xml:space="preserve"><value>无法应用更改：{0}</value></data>
+  <data name="InvalidCode" xml:space="preserve"><value>请输入 00 到 FF 的十六进制代码，不加 0x。</value></data>
+  <data name="InvalidValue" xml:space="preserve"><value>请输入 0 到 4294967295 的十进制整数。</value></data>
+  <data name="ConfirmWrite" xml:space="preserve"><value>写入此显示器命令？</value></data>
+  <data name="WriteConsequence" xml:space="preserve"><value>{0}&#10;VCP 0x{1:X2} = {2:N0}&#10;&#10;{3}</value></data>
+  <data name="ResetConsequence" xml:space="preserve"><value>这会将显示器设置恢复为出厂默认值。</value></data>
+  <data name="InputConsequence" xml:space="preserve"><value>切换输入源可能断开此电脑与显示器的连接。</value></data>
+  <data name="PowerConsequence" xml:space="preserve"><value>这会更改显示器电源状态，可能关闭屏幕。</value></data>
+  <data name="Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="FeatureWritten" xml:space="preserve"><value>0x{0:X2}：已接受写入值 {1:N0}。</value></data>
+  <data name="CommunicationError" xml:space="preserve"><value>无法与显示器通信</value></data>
+  <data name="Communicating" xml:space="preserve"><value>正在与显示器通信</value></data>
+  <data name="CapabilitiesUnavailable" xml:space="preserve"><value>无法读取能力：{0}</value></data>
+  <data name="Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Language" xml:space="preserve"><value>语言</value></data>
+  <data name="SystemLanguage" xml:space="preserve"><value>跟随系统</value></data>
+  <data name="About" xml:space="preserve"><value>关于</value></data>
+  <data name="Version" xml:space="preserve"><value>版本 {0}</value></data>
+  <data name="AboutDescription" xml:space="preserve"><value>通过 DDC/CI 调节外接显示器。</value></data>
+  <data name="Color" xml:space="preserve"><value>颜色</value></data>
+  <data name="RedGain" xml:space="preserve"><value>红色增益</value></data>
+  <data name="GreenGain" xml:space="preserve"><value>绿色增益</value></data>
+  <data name="BlueGain" xml:space="preserve"><value>蓝色增益</value></data>
+  <data name="Input" xml:space="preserve"><value>输入</value></data>
+  <data name="InputSource" xml:space="preserve"><value>输入源</value></data>
+  <data name="NoBasicControls" xml:space="preserve"><value>此显示器未报告支持的基础控制。</value></data>
+  <data name="Audio" xml:space="preserve"><value>音频</value></data>
+  <data name="Volume" xml:space="preserve"><value>音量</value></data>
+  <data name="Mute" xml:space="preserve"><value>静音</value></data>
+  <data name="Unmute" xml:space="preserve"><value>取消静音</value></data>
+  <data name="Muted" xml:space="preserve"><value>静音</value></data>
+  <data name="Unmuted" xml:space="preserve"><value>未静音</value></data>
+  <data name="ColorPreset" xml:space="preserve"><value>颜色预设</value></data>
+  <data name="sRGB" xml:space="preserve"><value>sRGB</value></data>
+  <data name="NativeColor" xml:space="preserve"><value>原生颜色</value></data>
+  <data name="UserColor" xml:space="preserve"><value>用户 {0}</value></data>
+  <data name="WarmerValue" xml:space="preserve"><value>偏暖（{0}）</value></data>
+  <data name="CoolerValue" xml:space="preserve"><value>偏冷（{0}）</value></data>
+  <data name="Scaling" xml:space="preserve"><value>图像缩放</value></data>
+  <data name="NoScaling" xml:space="preserve"><value>不缩放</value></data>
+  <data name="FitImage" xml:space="preserve"><value>适合画面，保持比例</value></data>
+  <data name="FitHeight" xml:space="preserve"><value>适合高度，保持比例</value></data>
+  <data name="FitWidth" xml:space="preserve"><value>适合宽度，保持比例</value></data>
+  <data name="StretchHeight" xml:space="preserve"><value>拉伸至高度</value></data>
+  <data name="StretchWidth" xml:space="preserve"><value>拉伸至宽度</value></data>
+  <data name="ExpandHorizontal" xml:space="preserve"><value>水平扩展</value></data>
+  <data name="ExpandBoth" xml:space="preserve"><value>水平和垂直扩展</value></data>
+  <data name="SqueezeImage" xml:space="preserve"><value>压缩画面</value></data>
+  <data name="NonlinearScaling" xml:space="preserve"><value>非线性缩放</value></data>
+  <data name="UsageTime" xml:space="preserve"><value>累计开机时间</value></data>
+  <data name="RefreshRate" xml:space="preserve"><value>当前刷新率</value></data>
+  <data name="HoursValue" xml:space="preserve"><value>{0:N0} 小时</value></data>
+  <data name="HertzValue" xml:space="preserve"><value>{0:N2} Hz</value></data>
+  <data name="RgbGain" xml:space="preserve"><value>RGB 增益</value></data>
+  <data name="Model" xml:space="preserve"><value>型号</value></data>
+  <data name="MccsVersion" xml:space="preserve"><value>MCCS 版本</value></data>
+  <data name="DisplayInformation" xml:space="preserve"><value>显示器信息</value></data>
+</root>

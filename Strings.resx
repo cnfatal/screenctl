@@ -1,0 +1,82 @@
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="Quick" xml:space="preserve"><value>Quick controls</value></data>
+  <data name="Advanced" xml:space="preserve"><value>Advanced controls</value></data>
+  <data name="SelectDisplay" xml:space="preserve"><value>Select a display</value></data>
+  <data name="Display" xml:space="preserve"><value>Display</value></data>
+  <data name="Brightness" xml:space="preserve"><value>Brightness</value></data>
+  <data name="Contrast" xml:space="preserve"><value>Contrast</value></data>
+  <data name="Picture" xml:space="preserve"><value>Picture</value></data>
+  <data name="VcpCode" xml:space="preserve"><value>VCP code (hex)</value></data>
+  <data name="Value" xml:space="preserve"><value>Value</value></data>
+  <data name="Read" xml:space="preserve"><value>Read value</value></data>
+  <data name="Write" xml:space="preserve"><value>Write value</value></data>
+  <data name="ReportedMaximum" xml:space="preserve"><value>Maximum: {0:N0}</value></data>
+  <data name="Capabilities" xml:space="preserve"><value>Display capabilities</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Refresh displays</value></data>
+  <data name="Open" xml:space="preserve"><value>Open</value></data>
+  <data name="Exit" xml:space="preserve"><value>Exit</value></data>
+  <data name="TrayTitle" xml:space="preserve"><value>Screenctl · Monitor control</value></data>
+  <data name="NoDisplays" xml:space="preserve"><value>No external displays detected.</value></data>
+  <data name="FeatureUnavailable" xml:space="preserve"><value>Cannot read: {0}</value></data>
+  <data name="AdjustmentFailed" xml:space="preserve"><value>Couldn't apply the change: {0}</value></data>
+  <data name="InvalidCode" xml:space="preserve"><value>Enter a hexadecimal code from 00 to FF, without 0x.</value></data>
+  <data name="InvalidValue" xml:space="preserve"><value>Enter a decimal integer from 0 to 4294967295.</value></data>
+  <data name="ConfirmWrite" xml:space="preserve"><value>Write this display command?</value></data>
+  <data name="WriteConsequence" xml:space="preserve"><value>{0}&#10;VCP 0x{1:X2} = {2:N0}&#10;&#10;{3}</value></data>
+  <data name="ResetConsequence" xml:space="preserve"><value>This resets the display settings to their factory defaults.</value></data>
+  <data name="InputConsequence" xml:space="preserve"><value>Switching input may disconnect this computer from the display.</value></data>
+  <data name="PowerConsequence" xml:space="preserve"><value>This changes the display's power state and may turn the screen off.</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="FeatureWritten" xml:space="preserve"><value>0x{0:X2}: write {1:N0} accepted.</value></data>
+  <data name="CommunicationError" xml:space="preserve"><value>Couldn't communicate with the display</value></data>
+  <data name="Communicating" xml:space="preserve"><value>Communicating with the display</value></data>
+  <data name="CapabilitiesUnavailable" xml:space="preserve"><value>Cannot read capabilities: {0}</value></data>
+  <data name="Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Language" xml:space="preserve"><value>Language</value></data>
+  <data name="SystemLanguage" xml:space="preserve"><value>Use system language</value></data>
+  <data name="About" xml:space="preserve"><value>About</value></data>
+  <data name="Version" xml:space="preserve"><value>Version {0}</value></data>
+  <data name="AboutDescription" xml:space="preserve"><value>Control external displays using DDC/CI.</value></data>
+  <data name="Color" xml:space="preserve"><value>Color</value></data>
+  <data name="RedGain" xml:space="preserve"><value>Red gain</value></data>
+  <data name="GreenGain" xml:space="preserve"><value>Green gain</value></data>
+  <data name="BlueGain" xml:space="preserve"><value>Blue gain</value></data>
+  <data name="Input" xml:space="preserve"><value>Input</value></data>
+  <data name="InputSource" xml:space="preserve"><value>Input source</value></data>
+  <data name="NoBasicControls" xml:space="preserve"><value>This display reports no supported quick controls.</value></data>
+  <data name="Audio" xml:space="preserve"><value>Audio</value></data>
+  <data name="Volume" xml:space="preserve"><value>Volume</value></data>
+  <data name="Mute" xml:space="preserve"><value>Mute</value></data>
+  <data name="Unmute" xml:space="preserve"><value>Unmute</value></data>
+  <data name="Muted" xml:space="preserve"><value>Muted</value></data>
+  <data name="Unmuted" xml:space="preserve"><value>Unmuted</value></data>
+  <data name="ColorPreset" xml:space="preserve"><value>Color preset</value></data>
+  <data name="sRGB" xml:space="preserve"><value>sRGB</value></data>
+  <data name="NativeColor" xml:space="preserve"><value>Native color</value></data>
+  <data name="UserColor" xml:space="preserve"><value>User {0}</value></data>
+  <data name="WarmerValue" xml:space="preserve"><value>Warmer ({0})</value></data>
+  <data name="CoolerValue" xml:space="preserve"><value>Cooler ({0})</value></data>
+  <data name="Scaling" xml:space="preserve"><value>Image scaling</value></data>
+  <data name="NoScaling" xml:space="preserve"><value>No scaling</value></data>
+  <data name="FitImage" xml:space="preserve"><value>Fit image, preserve aspect ratio</value></data>
+  <data name="FitHeight" xml:space="preserve"><value>Fit height, preserve aspect ratio</value></data>
+  <data name="FitWidth" xml:space="preserve"><value>Fit width, preserve aspect ratio</value></data>
+  <data name="StretchHeight" xml:space="preserve"><value>Stretch to height</value></data>
+  <data name="StretchWidth" xml:space="preserve"><value>Stretch to width</value></data>
+  <data name="ExpandHorizontal" xml:space="preserve"><value>Horizontal expansion</value></data>
+  <data name="ExpandBoth" xml:space="preserve"><value>Horizontal and vertical expansion</value></data>
+  <data name="SqueezeImage" xml:space="preserve"><value>Squeeze</value></data>
+  <data name="NonlinearScaling" xml:space="preserve"><value>Nonlinear scaling</value></data>
+  <data name="UsageTime" xml:space="preserve"><value>Power-on time</value></data>
+  <data name="RefreshRate" xml:space="preserve"><value>Current refresh rate</value></data>
+  <data name="HoursValue" xml:space="preserve"><value>{0:N0} hours</value></data>
+  <data name="HertzValue" xml:space="preserve"><value>{0:N2} Hz</value></data>
+  <data name="RgbGain" xml:space="preserve"><value>RGB gain</value></data>
+  <data name="Model" xml:space="preserve"><value>Model</value></data>
+  <data name="MccsVersion" xml:space="preserve"><value>MCCS version</value></data>
+  <data name="DisplayInformation" xml:space="preserve"><value>Display information</value></data>
+</root>

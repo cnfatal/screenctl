@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-2025
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Set version
+        run: |
+          "VERSION=$($env:GITHUB_REF_NAME.Substring(1))" >> $env:GITHUB_ENV
+
+      - name: Publish
+        run: >-
+          dotnet publish Screenctl.csproj -c Release -r win-x64
+          --self-contained true -p:WindowsAppSDKSelfContained=true
+          -p:Version=$env:VERSION -o artifacts/Screenctl
+
+      - name: Package
+        run: |
+          Copy-Item README.md, docs artifacts/Screenctl/ -Recurse
+          $archive = "Screenctl-$env:VERSION-win-x64.zip"
+          Compress-Archive -Path artifacts/Screenctl/* -DestinationPath "artifacts/$archive"
+          $hash = (Get-FileHash "artifacts/$archive" -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  $archive" | Set-Content "artifacts/$archive.sha256" -Encoding ascii
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create $env:GITHUB_REF_NAME artifacts/*.zip artifacts/*.sha256
+          --verify-tag --title "Screenctl $env:VERSION" --generate-notes
