@@ -17,9 +17,6 @@
   <data name="ReportedMaximum" xml:space="preserve"><value>Maximum: {0:N0}</value></data>
   <data name="Capabilities" xml:space="preserve"><value>Display capabilities</value></data>
   <data name="Refresh" xml:space="preserve"><value>Refresh displays</value></data>
-  <data name="Open" xml:space="preserve"><value>Open</value></data>
-  <data name="Exit" xml:space="preserve"><value>Exit</value></data>
-  <data name="TrayTitle" xml:space="preserve"><value>Screenctl · Monitor control</value></data>
   <data name="NoDisplays" xml:space="preserve"><value>No external displays detected.</value></data>
   <data name="FeatureUnavailable" xml:space="preserve"><value>Cannot read: {0}</value></data>
   <data name="AdjustmentFailed" xml:space="preserve"><value>Couldn't apply the change: {0}</value></data>

@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Automation;
@@ -14,7 +15,7 @@ namespace Screenctl;
 
 internal sealed class MainWindow : Window
 {
-    private readonly Tray tray;
+    private readonly SubclassProc windowProc;
     private readonly TextBlock heading = Label("Quick", "TitleTextBlockStyle");
     private readonly ContentControl basic = new() { HorizontalContentAlignment = HorizontalAlignment.Stretch };
     private readonly ContentControl information = new() { HorizontalContentAlignment = HorizontalAlignment.Stretch };
@@ -80,13 +81,15 @@ internal sealed class MainWindow : Window
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(titleBar);
         AppWindow.Resize(new SizeInt32(1280, 900));
-        tray = new Tray(WinRT.Interop.WindowNative.GetWindowHandle(this), () =>
+        var window = WinRT.Interop.WindowNative.GetWindowHandle(this);
+        windowProc = (handle, message, wParam, lParam, id, data) =>
         {
-            AppWindow.Show();
-            ((OverlappedPresenter)AppWindow.Presenter).Restore();
-            Activate();
-        }, () => DispatcherQueue.TryEnqueue(() => _ = displays.Reload()), Close);
-        Closed += (_, _) => tray.Dispose();
+            if (message == 0x007E || message == 0x0218 && wParam == 0x0012)
+                _ = displays.Reload();
+            return DefSubclassProc(handle, message, wParam, lParam);
+        };
+        SetWindowSubclass(window, windowProc, 1, 0);
+        Closed += (_, _) => RemoveWindowSubclass(window, windowProc, 1);
         _ = displays.Reload();
     }
 
@@ -106,4 +109,15 @@ internal sealed class MainWindow : Window
         advanced.Visibility = page == "Advanced" ? Visibility.Visible : Visibility.Collapsed;
         Bind(heading, TextBlock.TextProperty, page);
     }
+
+    private delegate nint SubclassProc(nint window, uint message, nuint wParam, nint lParam, nuint id, nint data);
+
+    [DllImport("comctl32.dll")]
+    private static extern bool SetWindowSubclass(nint window, SubclassProc callback, nuint id, nint data);
+
+    [DllImport("comctl32.dll")]
+    private static extern bool RemoveWindowSubclass(nint window, SubclassProc callback, nuint id);
+
+    [DllImport("comctl32.dll")]
+    private static extern nint DefSubclassProc(nint window, uint message, nuint wParam, nint lParam);
 }
